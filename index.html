@@ -3,49 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Downloads & Assets</title>
+    <title>Bloxd man Texture Packs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>File Showcase & Downloads</h1>
-        <p>Browse and download my latest assets, files, and projects.</p>
-    </header>
+    <h1 class="title">Bloxd man Texture Packs</h1>
 
-    <main class="grid">
+    <!-- PAGE 1 CONTENT -->
+    <div class="pack-grid" id="page-1">
 
-        <!-- FILE ITEM 1 -->
-        <div class="card">
-            <img src="thumbs/thumb1.png" alt="File 1 Preview" class="thumbnail">
-            <div class="card-content">
-                <h3>My Custom Texture Pack</h3>
-                <p>A custom 16x16 asset pack containing custom textures and icons.</p>
-                <a href="files/texture-pack.zip" download class="btn">Download (.zip)</a>
+        <div class="card" onclick="downloadPack('files/freyon.zip')">
+            <img src="thumbs/freyon.png" alt="Freyon">
+            <div class="card-overlay">
+                <h2 style="color: #ff3333;">FREYON</h2>
+                <p>Last update: 11th August</p>
             </div>
         </div>
 
-        <!-- FILE ITEM 2 -->
-        <div class="card">
-            <img src="thumbs/thumb2.png" alt="File 2 Preview" class="thumbnail">
-            <div class="card-content">
-                <h3>Chrome Extension Script</h3>
-                <p>An unpacked browser script adding custom HUD features.</p>
-                <a href="files/script.js" target="_blank" class="btn">View File</a>
+        <div class="card" onclick="downloadPack('files/astray.zip')">
+            <img src="thumbs/astray.png" alt="Astray">
+            <div class="card-overlay">
+                <h2 style="color: #38bdf8;">ASTRAY</h2>
+                <p>Last update: 11th August</p>
             </div>
         </div>
 
-        <!-- FILE ITEM 3 -->
-        <div class="card">
-            <img src="thumbs/thumb3.png" alt="File 3 Preview" class="thumbnail">
-            <div class="card-content">
-                <h3>Project Asset Bundle</h3>
-                <p>High-quality artwork, overlays, and background assets.</p>
-                <a href="files/assets.zip" download class="btn">Download (.zip)</a>
+        <div class="card" onclick="downloadPack('files/barebones.zip')">
+            <img src="thumbs/barebones.png" alt="Bare Bones">
+            <div class="card-overlay">
+                <h2 style="color: #facc15;">BARE BONES</h2>
+                <p>Last update: 11th August</p>
             </div>
         </div>
 
-    </main>
+        <div class="card" onclick="downloadPack('files/sublight.zip')">
+            <img src="thumbs/sublight.png" alt="Sublight">
+            <div class="card-overlay">
+                <h2 style="color: #e879f9;">SUBLIGHT</h2>
+                <p>Last update: 11th August</p>
+            </div>
+        </div>
 
+    </div>
+
+    <!-- PAGE 2 CONTENT (Hidden by default) -->
+    <div class="pack-grid hidden" id="page-2">
+
+        <div class="card" onclick="downloadPack('files/pack5.zip')">
+            <img src="thumbs/pack5.png" alt="Pack 5">
+            <div class="card-overlay">
+                <h2 style="color: #22c55e;">CYBER</h2>
+                <p>Last update: 15th August</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <button class="nav-btn" id="prev-btn">◀</button>
+        <span class="page-text" id="page-indicator">Page 1 / 2</span>
+        <button class="nav-btn" id="next-btn">▶</button>
+    </div>
+
+    <!-- Bottom Social Links -->
+    <footer class="footer-links">
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://discord.gg" target="_blank">Discord</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
